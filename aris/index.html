@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAU YANG KU SAYANG❤️❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-container">
+    <iframe src="https://drive.google.com/file/d/18W8mJpddK9-CMTI8_LDbbR3PUo4C_o5R/preview" width="480" height="640" allow="autoplay" allowfullscreen></iframe>
+    <h2>JANGAN DI SKIP YA SAYANG❤️❤️❤️❤️</h2>
+    <div class="btn-group">
+      <button onclick="playVideo()">Play</button>
+      <button onclick="pauseVideo()">Pause</button>
+    </div>
+  </div>
+
+  <script>
+    const iframe = document.querySelector("iframe");
+
+    function playVideo() {
+      iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }
+
+    function pauseVideo() {
+      iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    }
+  </script>
+</body>
+</html>
